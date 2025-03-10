@@ -48,9 +48,6 @@ header .container {
     gap: 30px;
 }
 
-/* Adicione este código ao seu CSS existente */
-
-/* Reset da animação anterior */
 .link-menu {
     position: relative;
     color: white;
@@ -85,7 +82,6 @@ header .container {
     transform-origin: bottom left;
 }
 
-/* Redefinir qualquer estilo conflitante */
 .texto-original, .texto-hover {
     display: none;
 }
@@ -197,6 +193,87 @@ header .container {
     border-radius: 50%;
 }
 
+#projetos {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.titulo-secao {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4a148c;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+}
+
+.titulo-secao::after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 3px;
+    background: linear-gradient(to right, #7e57c2, #d987ff);
+    bottom: -8px;
+    left: 15%;
+    border-radius: 2px;
+}
+
+.projeto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.projeto-bloco {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(74, 20, 140, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-bloco:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(74, 20, 140, 0.2);;
+}
+
+.projeto-foto {
+    height: 200px;
+    overflow: hidden;
+}
+
+.projeto-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.projeto-bloco:hover .projeto-foto img {
+    transform: scale(1.1);
+}
+
+.bloco-conteudo {
+    padding: 25px;
+    text-align: left;
+}
+
+.bloco-conteudo h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #4a148c;
+    margin-bottom: 15px;
+}
+
+.bloco-conteudo p {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
 footer {
     background-color: #4a148c;
     color: white;
@@ -256,6 +333,19 @@ small {
     .sobre-texto p, .sobre-texto ul li {
         font-size: 0.95rem;
     }
+
+    .projeto-bloco {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 30px;
+    }
+
+    .titulo-secao {
+        font-size: 2rem;
+    }
+    
+    .projeto-conteudo h3 {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -282,5 +372,22 @@ small {
     
     .sobre-texto h3 {
         font-size: 1.1rem;
+    }
+
+    .projetos-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .projeto-imagem {
+        height: 180px;
+    }
+    
+    .projeto-conteudo {
+        padding: 20px;
+    }
+    
+    .titulo-secao {
+        font-size: 1.8rem;
     }
 }
