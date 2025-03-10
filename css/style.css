@@ -343,7 +343,7 @@ small {
         font-size: 2rem;
     }
     
-    .projeto-conteudo h3 {
+    .bloco-conteudo h3 {
         font-size: 1.2rem;
     }
 }
@@ -374,16 +374,16 @@ small {
         font-size: 1.1rem;
     }
 
-    .projetos-grid {
+    .projeto-grid {
         grid-template-columns: 1fr;
         gap: 25px;
     }
     
-    .projeto-imagem {
+    .projeto-foto {
         height: 180px;
     }
     
-    .projeto-conteudo {
+    .bloco-conteudo {
         padding: 20px;
     }
     
